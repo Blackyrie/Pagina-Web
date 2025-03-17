@@ -1,0 +1,102 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+}
+
+/* Modo claro */
+.light-theme {
+    background-color: white;
+    color: black;
+}
+
+/* Header */
+header {
+    background-color: #06311a;
+    padding: 20px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.banner p {
+    font-size: 18px;
+}
+
+/* Contenedor de categorías */
+.categorias {
+    display: flex;
+    flex-direction: row;
+    border: 2px red solid;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Tarjetas de categoría */
+.categoria {
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.categoria img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.categoria h3 {
+    margin-top: 10px;
+}
+
+.categoria:hover {
+    transform: scale(1.05);
+    background-color: #e100ff;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #332f2f;
+}
+
+/* Botón de tema */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border: none;
+    background-color: #1532d4;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.theme-btn:hover {
+    background-color: #b41db4;
+}
+
+/* Modo claro */
+.light-theme .categoria {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.light-theme .theme-btn {
+    background-color: black;
+    color: white;
+}

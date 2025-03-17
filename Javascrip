@@ -1,0 +1,24 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Botón para cambiar de tema
+    const toggleThemeBtn = document.createElement("button");
+    toggleThemeBtn.innerText = "Cambiar Tema";
+    toggleThemeBtn.classList.add("theme-btn");
+    document.body.appendChild(toggleThemeBtn);
+
+    // Evento para cambiar tema
+    toggleThemeBtn.addEventListener("click", function() {
+        document.body.classList.toggle("light-theme");
+    });
+
+    // Animación de aparición en categorías
+    const categorias = document.querySelectorAll(".categoria");
+    categorias.forEach((categoria, index) => {
+        categoria.style.opacity = "0";
+        categoria.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            categoria.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+            categoria.style.opacity = "1";
+            categoria.style.transform = "translateY(0)";
+        }, index * 200);
+    });
+});
